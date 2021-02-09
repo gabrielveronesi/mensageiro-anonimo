@@ -75,7 +75,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="titulo-modal">Pagar e Enviar</h5>
+        <h5 class="modal-title" id="titulo-modal">Pagar e Enviar - R$1,00</h5>
         </button>
       </div>
       <div class="modal-body">
@@ -95,7 +95,7 @@
           
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"data-dismiss="modal">Fechar</button>
+        <button type="button" onclick="enviarEmail()" class="btn btn-secondary"data-dismiss="modal">Fechar</button>
         <button type="button" class="btn btn-success">JÁ PAGUEI!</button>
       </div>
     </div>
@@ -106,10 +106,9 @@
 
   <footer class="mt-auto text-white-50">
     <p>Gabriel Veronesi <a href="#" class="text-white">Mensageiro Anônimo</a>, by <a href="#" class="text-white">@ggabrielveronesi</a>.</p>
+    <input type="button" onclick="enviar()" value="Exibir Alert" />
   </footer>
 </div>
-
-
     
   </body>
 </html>
@@ -123,6 +122,10 @@
 
 
 <script src="estilo.css"></script>
+
+<script src="src/index.js"></script>
+<script src="src/config/smtp.js"></script>
+
 <link href="estilo.css" rel="stylesheet">
 <!--Bootstrap-->
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">

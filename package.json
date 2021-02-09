@@ -1,0 +1,14 @@
+{
+  "name": "mensageiroanonimo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gabrielveronesi/mensageiroanonimo.git",
+  "author": "Gabriel Veronesi <veronesigabriel@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.4.17"
+  },
+  "scripts": {
+    "start": "node src"
+  }
+}
