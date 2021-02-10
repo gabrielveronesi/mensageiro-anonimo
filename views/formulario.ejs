@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/img/FAVICON.ico" />
+    <title>Mensageiro Anônimo</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossOrigin="anonymous"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Mensageiro Anônimo</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link active" href="formulario.html">Enviar</a>
+        <a class="nav-link" href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <img src="/img/LOGO.png" width=100 height=100>
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Seu Nome</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome Completo">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Numero do WhatsApp do Destino final</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Colocar o DDD">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Endereço de e-mail</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu Endereço de e-mail para contato">
+        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Escreva sua mensagem</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <!-- Botão para acionar modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                        Enviar
+                      </button>
+    </form>
+
+    <!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titulo-modal">Pagar e Enviar - R$1,00</h5>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="/img/qrcode/QRCODE.png" width=200 height=200> <!--QRCODE-->
+        <div class="form-group row">
+          <!--QRCODE-->
+          <label for="" class="col-sm-2 col-form-label" id="titulo-modal">QRCODE</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="00020126800014BR.GOV.BCB.PIX0136d1b14732-0834-4532-a560-4bd3b8fc3c4f0218mensageiro anônimo52040000530398654041.005802BR5916Gabriel Veronesi6009SAO PAULO61080540900062160512NUnTowYHjBLb63042C49">
+          </div>
+
+          <label for="staticEmail" class="col-sm-2 col-form-label" id="titulo-modal">PIX</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="d1b14732-0834-4532-a560-4bd3b8fc3c4f">
+          </div>
+          <!--QRCODE-->
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="enviarEmail()" class="btn btn-secondary"data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-success">JÁ PAGUEI!</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Gabriel Veronesi <a href="#" class="text-white">Mensageiro Anônimo</a>, by <a href="#" class="text-white">@ggabrielveronesi</a>.</p>
+    <input type="button" onclick="enviarEmail()" value="Exibir Alert" />
+  </footer>
+</div>
+    
+  </body>
+</html>
+
+
+
+<script>
+
+function enviarEmail() {
+  var email = "texto" 
+  
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', '/enviaremail');
+  xhr.send();
+
+  /*
+  $.post('/enviaremail',{email: email}, function(res){
+            console.log(res);
+            if(res === true){
+                resolve(true);
+            } else{
+                resolve(false);
+            }
+        })    
+  */
+  /*
+  const mailSent = await transporter.sendMail({
+    text: "aaaaaaaaaaaaaa", //texto
+    subject: "Assunto do e-mail", 
+    from: "thaisabreuu270@gmail.com", //quem vai enviar?
+    to: ["gabriel.veronesi69@gmail.com"],//quem vai receber?
+  });
+
+  console.log(mailSent);
+  */
+}
+
+</script>
+
+
+<link href="/css/estilo.css" rel="stylesheet">
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"></script>
+<script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+</html>
