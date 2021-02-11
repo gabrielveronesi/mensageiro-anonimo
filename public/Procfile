@@ -1,1 +1,2 @@
+web: npm install nodemailer
 web: npm run start
