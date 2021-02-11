@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
 
 
 
-app.post('/enviaremail', (req, res) => {
+app.patch('/enviaremail', (req, res) => {
   function enviarEmail() {
     const mailSent = transporter.sendMail({
       text: "bbbbaaaaaaaaaa", //texto
