@@ -2,11 +2,14 @@ const nodemailer = require("nodemailer");
 const SMTP_CONFIG = require("./src/config/smtp");
 const express = require("./src/config/customexpress")
 const app = express();
-const PORT = process.env.PORT || 8080;
-    
+//const PORT = process.env.PORT || 3000;
+   /* 
     app.listen(PORT, () => {
       console.log('Servidor rodando na porta 3000')
     })
+*/
+
+app.listen(process.env.PORT || 3000);
 
 const transporter = nodemailer.createTransport({
   host: SMTP_CONFIG.host,
