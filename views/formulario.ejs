@@ -66,12 +66,12 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
       <!-- Botão para acionar modal -->
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                      <button type="button" onclick="enviarEmail()" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
                         Enviar
                       </button>
     </form>
-
-    <!-- Modal -->
+<!--
+     Modal 
 <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -80,9 +80,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="/img/qrcode/QRCODE.png" width=200 height=200> <!--QRCODE-->
+        <img src="/img/qrcode/QRCODE.png" width=200 height=200> <--QRCODE
         <div class="form-group row">
-          <!--QRCODE-->
+          
           <label for="" class="col-sm-2 col-form-label" id="titulo-modal">QRCODE</label>
           <div class="col-sm-10">
             <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="00020126800014BR.GOV.BCB.PIX0136d1b14732-0834-4532-a560-4bd3b8fc3c4f0218mensageiro anônimo52040000530398654041.005802BR5916Gabriel Veronesi6009SAO PAULO61080540900062160512NUnTowYHjBLb63042C49">
@@ -92,22 +92,21 @@
           <div class="col-sm-10">
             <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="d1b14732-0834-4532-a560-4bd3b8fc3c4f">
           </div>
-          <!--QRCODE-->
+          QRCODE
           
       </div>
       <div class="modal-footer">
-        <button type="button" onclick="enviarEmail()" class="btn btn-secondary"data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-secondary"data-dismiss="modal">Fechar</button>
         <button type="button" class="btn btn-success">JÁ PAGUEI!</button>
       </div>
     </div>
   </div>
 </div>
-    
+   -->
   </main>
 
   <footer class="mt-auto text-white-50">
     <p>Gabriel Veronesi <a href="#" class="text-white">Mensageiro Anônimo</a>, by <a href="#" class="text-white">@ggabrielveronesi</a>.</p>
-    <input type="button" onclick="enviarEmail()" value="Exibir Alert" />
   </footer>
 </div>
     
