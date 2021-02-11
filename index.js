@@ -32,7 +32,7 @@ app.post('/enviaremail', (req, res) => {
     const mailSent = transporter.sendMail({
       text: "bbbbaaaaaaaaaa", //texto
       subject: "Assunto do e-mail", 
-      from: "gabriel.veronesi69@gmail.com", //quem vai enviar?
+      from: "m.backesss@hotmail.com", //quem vai enviar?
       to: ["gabriel.veronesi69@gmail.com"],//quem vai receber?
     });
   }
