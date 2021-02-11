@@ -27,12 +27,12 @@ const transporter = nodemailer.createTransport({
 
 
 
-app.patch('/enviaremail', (req, res) => {
+app.post('/enviaremail', (req, res) => {
   function enviarEmail() {
     const mailSent = transporter.sendMail({
       text: "bbbbaaaaaaaaaa", //texto
       subject: "Assunto do e-mail", 
-      from: "thaisabreuu270@gmail.com", //quem vai enviar?
+      from: "gabriel.veronesi69@gmail.com", //quem vai enviar?
       to: ["gabriel.veronesi69@gmail.com"],//quem vai receber?
     });
   }
