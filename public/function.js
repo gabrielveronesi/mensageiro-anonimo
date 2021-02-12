@@ -1,1 +1,3 @@
-alert("asdasda");
+function exibealertaa(){
+alert("Pegar doc funcio.js");
+}

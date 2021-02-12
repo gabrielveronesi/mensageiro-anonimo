@@ -40,6 +40,13 @@ app.post('/enviaremail', (req, res) => {
  })
 
 
+app.get('/exibealerta', (req, res) => {
+  function exibealerta(){
+    alert("Pegar doc funcio.js");
+    }
+    exibealerta();
+ })
+
  app.get('/', (req, res) => {
   res.render("index")
  })
