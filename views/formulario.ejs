@@ -66,7 +66,7 @@
         <textarea class="form-control" id="Mensagem" rows="3"></textarea>
       </div>
       <!-- Botão para acionar modal -->
-                      <button type="button" type="submit" href="/exibealerta" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                      <button type="button" type="submit" onclick="enviarEmail()" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
                         Enviar
                       </button>
 
@@ -116,29 +116,21 @@
 
 
 <script>
-/*
-var form = document.getElementById('formulario');
-var campo = document.getElementById('Nome');
 
-form.addEventListener('submit', function(e) {
-    // alerta o valor do campo
-    alert(campo.value);
 
-    // impede o envio do form
-    e.preventDefault();
-});
-*/
+
 
 function enviarEmail() {
   
-  var emaill = "testeeeeeeeeee" 
-  
+  var a = "xxxxxx";
+ 
+  var emailll = "testeeeeeeeeee agora foiiiiiii";
   let xhr = new XMLHttpRequest();
-  xhr.open('POST', '/enviaremail');
+  xhr.open('POST', '/enviaremail', {email: emailll} );
   xhr.send();
-
-  /*
-  $.post('/enviaremail',{email: email}, function(res){
+/*
+    
+  $.post('/enviaremail',{email: emaill}, function(res){
             console.log(res);
             if(res === true){
                 resolve(true);
@@ -146,7 +138,7 @@ function enviarEmail() {
                 resolve(false);
             }
         })    
-  */
+        */
   /*
   const mailSent = await transporter.sendMail({
     text: "aaaaaaaaaaaaaa", //texto
@@ -157,11 +149,14 @@ function enviarEmail() {
 
   console.log(mailSent);
   */
+
 }
 
 
 </script>
 <script src="/function.js"></script>
+<script src="/index.js"></script>
+<script src="index.js"></script>
 <link href="/css/estilo.css" rel="stylesheet">
 <!--Bootstrap-->
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"></script>
