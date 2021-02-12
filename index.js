@@ -28,16 +28,17 @@ const transporter = nodemailer.createTransport({
 
 
 app.post('/enviaremail', (req, res) => {
-  function enviarEmail() {
+  function eenviarEmail() {
     const mailSent = transporter.sendMail({
-      text: "bbbbaaaaaaaaaa", //texto
+      text: "email", //texto
       subject: "Assunto do e-mail", 
       from: "msga-enviamensagem@outlook.com", //quem vai enviar?
-      to: ["gabriel.veronesi69@gmail.com"],//quem vai receber?
+      to: ["msga-recebermensagem@outlook.com"],//quem vai receber?
     });
   }
-  enviarEmail();
+  eenviarEmail();
  })
+
 
  app.get('/', (req, res) => {
   res.render("index")
@@ -47,7 +48,13 @@ app.post('/enviaremail', (req, res) => {
   res.render("formulario")
  })
 
+ app.get('/contato', (req, res) => {
+  res.render("contato")
+ })
+
+ app.get('/modelo', (req, res) => {
+  res.render("modelo")
+ })
+
+
  app.set('view engine', 'ejs');
-
-//enviarEmail();
-
