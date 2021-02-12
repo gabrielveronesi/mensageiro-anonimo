@@ -46,66 +46,34 @@
   <main class="px-3">
     <img src="/img/LOGO.png" width=100 height=100>
 
-    <form id=formulario>
-      <div class="form-group">
-        <label for="formGroupExampleInput">Seu Nome</label>
-        <input type="text" class="form-control" id="Nome" placeholder="Nome Completo">
-      </div>
+    <form id=formulario action="/enviaremail" method="POST">
       <div class="form-group">
         <label for="formGroupExampleInput">Numero do WhatsApp do Destino final</label>
-        <input type="text" class="form-control" id="NumeroWhats" placeholder="Colocar o DDD">
+        <input type="text" class="form-control" name="NumeroWhats" placeholder="Colocar o DDD">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Endereço de e-mail</label>
-        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Seu Endereço de e-mail para contato">
+        <label for="exampleInputEmail1">Seu Endereço de e-mail</label>
+        <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Se o alguem te responder enviaremos por e-mail">
         <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
       </div>
       
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Escreva sua mensagem</label>
-        <textarea class="form-control" id="Mensagem" rows="3"></textarea>
+        <textarea class="form-control" name="Mensagem" rows="3"></textarea>
       </div>
       <!-- Botão para acionar modal -->
-                      <button type="button" type="submit" onclick="enviarEmail()" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                      <button type="submit"  class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
                         Enviar
                       </button>
 
-                      <input type="submit" value="Enviar">
+                    
     </form>
 <!--
      Modal 
-<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="titulo-modal">Pagar e Enviar - R$1,00</h5>
-        </button>
-      </div>
-      <div class="modal-body">
-        <img src="/img/qrcode/QRCODE.png" width=200 height=200> <--QRCODE
-        <div class="form-group row">
-          
-          <label for="" class="col-sm-2 col-form-label" id="titulo-modal">QRCODE</label>
-          <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="00020126800014BR.GOV.BCB.PIX0136d1b14732-0834-4532-a560-4bd3b8fc3c4f0218mensageiro anônimo52040000530398654041.005802BR5916Gabriel Veronesi6009SAO PAULO61080540900062160512NUnTowYHjBLb63042C49">
-          </div>
 
-          <label for="staticEmail" class="col-sm-2 col-form-label" id="titulo-modal">PIX</label>
-          <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="d1b14732-0834-4532-a560-4bd3b8fc3c4f">
-          </div>
-          QRCODE
-          
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-success">JÁ PAGUEI!</button>
-      </div>
-    </div>
-  </div>
-</div>
    -->
   </main>
+  
   <footer class="mt-auto text-white-50">
     <p>Gabriel Veronesi <a href="#" class="text-white">Mensageiro Anônimo</a>, by <a href="#" class="text-white">@ggabrielveronesi</a>.</p>
   </footer>
@@ -115,18 +83,11 @@
 
 
 
+
 <script>
-
-
-
-
 function enviarEmail() {
-  
-  var a = "xxxxxx";
- 
-  var emailll = "testeeeeeeeeee agora foiiiiiii";
   let xhr = new XMLHttpRequest();
-  xhr.open('POST', '/enviaremail', {email: emailll} );
+  xhr.open('POST', '/enviaremail');
   xhr.send();
 /*
     
@@ -155,8 +116,7 @@ function enviarEmail() {
 
 </script>
 <script src="/function.js"></script>
-<script src="/index.js"></script>
-<script src="index.js"></script>
+
 <link href="/css/estilo.css" rel="stylesheet">
 <!--Bootstrap-->
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"></script>

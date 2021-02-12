@@ -4,13 +4,6 @@ const express = require("./src/config/customexpress")
 const app = express();
 const bodyParser = require('body-parser')
 
-//const PORT = process.env.PORT || 3000;
-   /* 
-    app.listen(PORT, () => {
-      console.log('Servidor rodando na porta 3000')
-    })
-*/
-
 //Body Parser
  app.use(bodyParser.urlencoded({extended:false}))
  app.use(bodyParser.json())
@@ -30,38 +23,20 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+
 app.post('/enviaremail', (req, res) => {
 
   function eenviarEmail() {
-    console.log(req.body.email);
-    console.log(req.body.email);
     const mailSent = transporter.sendMail({
-      text: "emailll", //texto
-      subject: "Assunto do e-mail", 
+      text: req.body.Mensagem + "NUMERO WHATS:" +req.body.NumeroWhats, //texto
+      subject: req.body.Email, 
       from: "msga-enviamensagem@outlook.com", //quem vai enviar?
       to: ["msga-recebermensagem@outlook.com"],//quem vai receber?
     });
   }
-  eenviarEmail();
+  eenviarEmail()
+  res.render("enviado")
  })
-
- https://www.youtube.com/watch?v=P1OI_EKyl6U&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=22
-
- /*
-
-app.post('/enviaremail', (req, res) => {
-  function eenviarEmail() {
-    const mailSent = transporter.sendMail({
-      text: emaill, //texto
-      subject: "Assunto do e-mail", 
-      from: "msga-enviamensagem@outlook.com", //quem vai enviar?
-      to: ["msga-recebermensagem@outlook.com"],//quem vai receber?
-    });
-  }
-  eenviarEmail();
- })
-
-*/
 
  app.get('/', (req, res) => {
   res.render("index")
@@ -79,6 +54,9 @@ app.post('/enviaremail', (req, res) => {
   res.render("modelo")
  })
 
+ app.get('/enviado', (req, res) => {
+  res.render("enviado")
+ })
 
  app.set('view engine', 'ejs');
 
