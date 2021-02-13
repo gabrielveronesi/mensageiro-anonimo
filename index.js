@@ -28,7 +28,9 @@ app.post('/enviaremail', (req, res) => {
 
   function eenviarEmail() {
     const mailSent = transporter.sendMail({
-      text: req.body.Mensagem + "NUMERO WHATS:" +req.body.NumeroWhats, //texto
+
+      text: "http://wa.me/55"+req.body.NumeroWhats+" "+"CONTATO->"+" "+req.body.Mensagem,
+      //text: req.body.Mensagem + " " + "NUMERO WHATS:"+ " -> " +req.body.NumeroWhats, //texto
       subject: req.body.Email, 
       from: "msga-enviamensagem@outlook.com", //quem vai enviar?
       to: ["msga-recebermensagem@outlook.com"],//quem vai receber?
