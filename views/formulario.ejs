@@ -58,7 +58,7 @@
           <div class="form-group">
           <label for="formGroupExampleInput">Numero do WhatsApp do Destino final</label>
           <br />
-          <input type="number" class="form-control" name="NumeroWhats" placeholder="Colocar o DDD" required>
+          <input type="number" class="form-control" name="NumeroWhats" placeholder="Colocar o DDD, Sem Espaços!" required>
           <div class="invalid-feedback">
             Por favor, informe um número válido.
           </div>
@@ -106,13 +106,21 @@
         </div>
 <!--Concordar com termos-->
 
+        <!-- Botão para realmente enviar! -->
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+          Enviar
+        </button>
+<!--ESPERAR AS PROPAGANDAS!
         <br />
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
           Enviar Mensagem
         </button>
       
 
-        <!-- Modal -->
+        <-- Modal -
+
+
+
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -130,7 +138,12 @@
                   width=250 height=250>
               </div>
               <div class="modal-footer">
-                <!-- Botão para realmente enviar! -->
+                
+                
+                Botão para realmente enviar!
+               
+               
+               
                 <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
                   Enviar
                 </button>
@@ -138,6 +151,7 @@
             </div>
           </div>
         </div>
+      -->
       </form>
 
 
@@ -150,7 +164,7 @@
     <!--Footer-->
   <footer class="mt-auto text-white-50">
     <p>Mensageiro Anônimo © 2021</p>
-    <a href="/politica" class="text-white">Termos e Condições</a>
+    <a href="/politica" class="text-white">Política de Privacidade</a>
   </footer>
   <!--Footer-->
 
