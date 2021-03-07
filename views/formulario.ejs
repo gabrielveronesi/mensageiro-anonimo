@@ -68,11 +68,11 @@
 
         <!--Numero do whatsapp-->
           <div class="form-group">
-          <label for="formGroupExampleInput">Numero do WhatsApp do Destino final</label>
+          <label for="formGroupExampleInput">Número do WhatsApp do destinatário</label>
           <br />
-          <input type="number" class="form-control" name="NumeroWhats" placeholder="Colocar o DDD, Sem Espaços!" required>
+          <input type="number" class="form-control" name="NumeroWhats" placeholder="Informar o DDD, sem espaços." required>
           <div class="invalid-feedback">
-            Por favor, informe um número válido.
+            Número inválido. Verifique.
           </div>
           <div class="valid-feedback">
             Tudo certo!
@@ -82,7 +82,7 @@
         <!--Endereço de email-->
         <div class="form-group">
           <br />
-          <label for="exampleInputEmail1">Seu Endereço de e-mail</label>
+          <!--<label for="exampleInputEmail1">Seu Endereço de e-mail</label>
           <input type="email" class="form-control" name="Email" aria-describedby="emailHelp"
             placeholder="Se o alguem te responder enviaremos por e-mail" required>
             <div class="invalid-feedback">
@@ -91,16 +91,14 @@
             <div class="valid-feedback">
               Tudo certo!
             </div>
-          <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seus dados, com ninguém.</small>
+          <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seus dados, com ninguém.</small> -->
         </div>
         <br />
-
-
-
         <!--Endereço de email-->
+        
         <div class="form-group">
-          <label for="exampleFormControlTextarea1" required>Escreva sua mensagem</label>
-          <textarea class="form-control" name="Mensagem" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" required>Escreva sua mensagem. (Maximo 200 caracteres) </label>
+          <textarea class="form-control" name="Mensagem" rows="3" maxlength="200"></textarea>
         </div>
 
 <!--Concordar com termos-->
@@ -122,11 +120,6 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
           Enviar Mensagem
         </button>
-      
-
-     
-
-
 
         <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
