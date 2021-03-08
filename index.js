@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
 app.post('/enviaremail', (req, res) => {
   
   function enviarEmail() {
-    var aviso = " Mensagem Enviada Pelo Site: www.mensageiroanonimo.com.br"
+    var aviso = "------>*Mensagem Enviada Pelo Site: www.mensageiroanonimo.com.br*"
     var mensagemTratada = "http://wa.me/55"+req.body.NumeroWhats+"?text="+req.body.Mensagem.replace(/ /g, "%20")+aviso.replace(/ /g, "%20");
     var mensagem = req.body.Mensagem;
     
